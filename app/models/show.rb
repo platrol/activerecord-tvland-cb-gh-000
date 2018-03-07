@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
 
 
 
-    def build_network(data)
+    def build_network(data = {})
       network = Network.find_or_create_by(data)
       network.shows << self
     end
